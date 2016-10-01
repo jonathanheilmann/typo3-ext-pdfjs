@@ -1,0 +1,54 @@
+{namespace jh = JonathanHeilmann\Pdfjs\ViewHelpers}
+
+<f:layout name="defaultLayout" />
+
+<f:section name="content">
+
+    <jh:pageRenderer.addJsFile file="{settings.pdfJsDirectoryPath}compatibility.js" />
+    <jh:pageRenderer.addJsFile file="{settings.pdfJsDirectoryPath}build/pdf.js" />
+    <jh:pageRenderer.addJsFile file="{settings.pdfJsDirectoryPath}build/pdf.worker.js" />
+    <jh:pageRenderer.addJsFile file="{settings.pdfRendererPath}" excludeFromConcatenation="true" />
+
+    <jh:pageRenderer.addCssFile file="{settings.bootstrapStyles}" />
+    <jh:pageRenderer.addCssFile file="{settings.defaultStyles}" />
+
+    <div id="tx_pdfjs_pdfviewer-{cObj.uid}" class="pdfjs-container"
+         style="{f:if(condition:'{settings.maxWidth}', then:'max-width:{settings.maxWidth}px;height:auto;')}">
+
+        <f:render partial="PdfViewer/ShowSimple/Navigation" arguments="{_all}" />
+
+        <div id="wrapper-pdf-{cObj.uid}" class="wrapper-pdf">
+            <canvas id="pdf-{cObj.uid}" data-compute-ratio="1"></canvas>
+        </div>
+
+        <f:if condition="{settings.flexform.hideDownloadLink} == 0">
+            <div class="clearfix"></div>
+            <span>
+                <f:translate key="pdfViewer.downloadLink.linkText" />
+                <f:alias map="{fileTitle: '{f:if(condition: file.title, then: file.title, else: file.name)}'}">
+                    <a href="{file.publicUrl}" target="_blank" title="{f:translate(key:'pdfViewer.downloadLink.title', arguments:'{0: fileTitle}')}">
+                        {fileTitle}
+                    </a>
+                </f:alias>
+            </span>
+        </f:if>
+
+        <f:render section="javascript" arguments="{cObj: cObj, file: file}" />
+
+    </div>
+
+</f:section>
+
+<f:section name="javascript">
+    <jh:pageRenderer.addJsInlineCode name="tx_pdfjs_pdfviewer" addToFooter="true">
+        (function() {
+            var pdfjs{cObj.uid} = new tx_pdfjs({
+                <f:comment>We will need to wake up fluid</f:comment>
+                'pdf': '{file.publicUrl}',
+                'elementId': 'wrapper-pdf-{cObj.uid}',
+                'canvasId': 'pdf-{cObj.uid}',
+                'uid': '{cObj.uid}'
+            });
+        }());
+    </jh:pageRenderer.addJsInlineCode>
+</f:section>

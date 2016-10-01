@@ -1,0 +1,31 @@
+plugin.tx_pdfjs {
+    view {
+        templateRootPaths {
+            1 = EXT:pdfjs/Resources/Private/Templates/
+            100 = {$plugin.tx_pdfjs.view.templateRootPath}
+        }
+        partialRootPaths {
+            1 = EXT:pdfjs/Resources/Private/Partials/
+            100 = {$plugin.tx_pdfjs.view.partialRootPath}
+        }
+        layoutRootPaths {
+            1 = EXT:pdfjs/Resources/Private/Layouts/
+            100 = {$plugin.tx_pdfjs.view.layoutRootPath}
+        }
+    }
+
+    settings {
+        maxWidth = {$plugin.tx_pdfjs.settings.maxWidth}
+        imageNavigation {
+            position = {$plugin.tx_pdfjs.settings.imageNavigation.position}
+            image {
+                width = 80m
+                height = 80m
+            }
+        }
+        pdfJsDirectoryPath = {$plugin.tx_pdfjs.settings.pdfJsDirectoryPath}
+        pdfRendererPath = {$plugin.tx_pdfjs.settings.pdfRendererPath}
+        bootstrapStyles = {$plugin.tx_pdfjs.settings.bootstrapStyles}
+        defaultStyles = {$plugin.tx_pdfjs.settings.defaultStyles}
+    }
+}

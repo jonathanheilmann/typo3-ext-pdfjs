@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-20T16:50:31Z">
+		<header>
+			<generator>LFEditor</generator>
+			<authorName>Jonathan Heilmann</authorName>
+			<authorEmail>mail@jonathan-heilmann.de</authorEmail>
+		</header>
+		<body>
+		<trans-unit id="pdfViewer.file">
+			<source>File</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.hideDownloadLink">
+			<source>Hide download link</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos">
+			<source>Image navigation's position</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.bottom">
+			<source>Bottom</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.disable">
+			<source>Disable</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.left">
+			<source>Left</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.right">
+			<source>Right</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.top">
+			<source>Top</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.ts">
+			<source>By TypoScript</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.layout">
+			<source>Layout</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.layout.complete">
+			<source>Complete</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.layout.simple">
+			<source>Simple</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.maxWidth">
+			<source>maxWidth in px</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.sheetTitle">
+			<source>PDF Viewer</source>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

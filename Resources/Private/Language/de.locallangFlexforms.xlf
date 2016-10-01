@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-08-20T16:50:31Z">
+		<header>
+			<generator>LFEditor</generator>
+			<authorName>Jonathan Heilmann</authorName>
+			<authorEmail>mail@jonathan-heilmann.de</authorEmail>
+		</header>
+		<body>
+		<trans-unit id="pdfViewer.file" approved="yes">
+			<source>File</source>
+			<target>Datei</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.hideDownloadLink" approved="yes">
+			<source>Hide download link</source>
+			<target>Downloadlink verbergen</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos" approved="yes">
+			<source>Image navigation's position</source>
+			<target>Position der Bildernavigation</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.bottom" approved="yes">
+			<source>Bottom</source>
+			<target>Unten</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.disable" approved="yes">
+			<source>Disable</source>
+			<target>Deaktivieren</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.left" approved="yes">
+			<source>Left</source>
+			<target>Links</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.right" approved="yes">
+			<source>Right</source>
+			<target>Rechts</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.top" approved="yes">
+			<source>Top</source>
+			<target>Oben</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.imgNavigationPos.ts" approved="yes">
+			<source>By TypoScript</source>
+			<target>Aus TypoScript</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.layout" approved="yes">
+			<source>Layout</source>
+			<target>Layout</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.layout.complete" approved="yes">
+			<source>Complete</source>
+			<target>Komplett</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.layout.simple" approved="yes">
+			<source>Simple</source>
+			<target>Einfach</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.maxWidth" approved="yes">
+			<source>maxWidth in px</source>
+			<target>maxWidth in px</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.sheetTitle" approved="yes">
+			<source>PDF Viewer</source>
+			<target>PDF Viewer</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

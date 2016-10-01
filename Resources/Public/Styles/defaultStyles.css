@@ -1,0 +1,45 @@
+/*
+ * This file contains non bootstrap styles, required when using EXT:pdfjs with bootstrap
+ */
+
+.tx_pdfjs .wrapper-pdf {
+    display: block;
+    overflow: scroll;
+    border: 1px solid #ccc
+}
+.tx_pdfjs .wrapper-pdf > canvas {
+    display: block;
+}
+
+.tx_pdfjs .btn-toolbar {
+    margin: 12px 0 12px -5px;
+}
+.tx_pdfjs .btn-toolbar .btn-group.btn-group-left {
+    float: left;
+    display: inline-block;
+}
+.tx_pdfjs .btn-toolbar .btn-group.btn-group-right {
+    float: right;
+    display: inline-block;
+}
+.tx_pdfjs .btn-toolbar .page-index-wrapper {
+    float:left;
+    position:relative;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.55;
+    border-radius: 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,30 @@
+#customsubcategory=pdfViewer=PDF Viewer
+plugin.tx_pdfjs {
+    view {
+        # cat=plugin.tx_pdfjs/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:pdfjs/Resources/Private/Templates/
+        # cat=plugin.tx_pdfjs/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:pdfjs/Resources/Private/Partials/
+        # cat=plugin.tx_pdfjs/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:pdfjs/Resources/Private/Layouts/
+    }
+
+    settings {
+        imageNavigation {
+            # cat=plugin.tx_pdfjs/pdfViewer/040; type=options[disabled,top,right,bottom,left]; label=Image navigation: Position of image navigation
+            //position = disabled
+        }
+        # cat=plugin.tx_pdfjs/pdfViewer/010; type=string; label=maxWidth: Maximum width of PDF Viewer in px
+        maxWidth = 1024
+
+        # cat=plugin.tx_pdfjs/pdfViewer/910; type=string; label=PDFjs directory path: Path where PDFjs is stored
+        pdfJsDirectoryPath = EXT:pdfjs/Resources/Public/Plugins/PDFjs/
+        # cat=plugin.tx_pdfjs/pdfViewer/920; type=string; label=pdfRenderer JavaScript: Path to pdfRenderer.js
+        pdfRendererPath = EXT:pdfjs/Resources/Public/JavaScript/pdfRenderer.js
+
+        # cat=plugin.tx_pdfjs/pdfViewer/930; type=string; label=Bootstrap styles: Use path "EXT:pdfjs/Resources/Public/Styles/bootstrapStyles.css" if you do not use bootstrap, but want to use bootstrap styles for EXT:pdfjs
+        bootstrapStyles =
+        # cat=plugin.tx_pdfjs/pdfViewer/930; type=string; label=Default styles: Extension specific styles
+        defaultStyles = EXT:pdfjs/Resources/Public/Styles/defaultStyles.css
+    }
+}
