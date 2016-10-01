@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-20T20:36:11Z">
+		<header>
+			<generator>LFEditor</generator>
+			<authorName>Jonathan Heilmann</authorName>
+			<authorEmail>mail@jonathan-heilmann.de</authorEmail>
+		</header>
+		<body>
+		<trans-unit id="pdfViewer.downloadLink.linkText">
+			<source>Download:</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.downloadLink.title">
+			<source>Download file &amp;quot;%s&amp;quot;</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.fit">
+			<source>fit</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.fit.title">
+			<source>Fit page</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.next">
+			<source>next &gt;</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.next.title">
+			<source>Next</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.page">
+			<source>Page</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.pageIndexSeparator">
+			<source>/</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.previous">
+			<source>&lt; previous</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.previous.title">
+			<source>Previous</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.zoomIn">
+			<source>+</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.zoomIn.title">
+			<source>Zoom in</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.zoomOut">
+			<source>-</source>
+		</trans-unit>
+		<trans-unit id="pdfViewer.zoomOut.title">
+			<source>Zoom out</source>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

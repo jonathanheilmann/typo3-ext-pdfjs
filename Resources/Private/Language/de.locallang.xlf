@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-08-20T20:36:11Z">
+		<header>
+			<generator>LFEditor</generator>
+			<authorName>Jonathan Heilmann</authorName>
+			<authorEmail>mail@jonathan-heilmann.de</authorEmail>
+		</header>
+		<body>
+		<trans-unit id="pdfViewer.downloadLink.linkText" approved="yes">
+			<source>Download:</source>
+			<target>Download:</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.downloadLink.title" approved="yes">
+			<source>Download file &amp;quot;%s&amp;quot;</source>
+			<target>Datei &amp;quot;%s&amp;quot; herunterladen</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.fit" approved="yes">
+			<source>fit</source>
+			<target>passend</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.fit.title" approved="yes">
+			<source>Fit page</source>
+			<target>Seite anpassen</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.next" approved="yes">
+			<source>next &gt;</source>
+			<target>nächste &gt;</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.next.title" approved="yes">
+			<source>Next</source>
+			<target>Nächste</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.page" approved="yes">
+			<source>Page</source>
+			<target>Seite</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.pageIndexSeparator" approved="yes">
+			<source>/</source>
+			<target>/</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.previous" approved="yes">
+			<source>&lt; previous</source>
+			<target>&lt; vorherige</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.previous.title" approved="yes">
+			<source>Previous</source>
+			<target>Vorherige</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.zoomIn" approved="yes">
+			<source>+</source>
+			<target>+</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.zoomIn.title" approved="yes">
+			<source>Zoom in</source>
+			<target>Reinzoomen</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.zoomOut" approved="yes">
+			<source>-</source>
+			<target>-</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.zoomOut.title" approved="yes">
+			<source>Zoom out</source>
+			<target>Rauszoomen</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>
