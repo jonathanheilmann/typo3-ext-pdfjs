@@ -26,7 +26,7 @@
             <span>
                 <f:translate key="pdfViewer.downloadLink.linkText" />
                 <f:alias map="{fileTitle: '{f:if(condition: file.title, then: file.title, else: file.name)}'}">
-                    <a href="{file.publicUrl}" target="_blank" title="{f:translate(key:'pdfViewer.downloadLink.title', arguments:'{0: fileTitle}')}">
+                    <a href="/{file.publicUrl}" target="_blank" title="{f:translate(key:'pdfViewer.downloadLink.title', arguments:'{0: fileTitle}')}">
                         {fileTitle}
                     </a>
                 </f:alias>
@@ -44,7 +44,7 @@
         (function() {
             var pdfjs{cObj.uid} = new tx_pdfjs({
                 <f:comment>We will need to wake up fluid</f:comment>
-                'pdf': '{file.publicUrl}',
+                'pdf': '/{file.publicUrl}',
                 'elementId': 'wrapper-pdf-{cObj.uid}',
                 'canvasId': 'pdf-{cObj.uid}',
                 'uid': '{cObj.uid}'
