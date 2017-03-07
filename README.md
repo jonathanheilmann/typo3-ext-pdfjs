@@ -65,3 +65,9 @@ You are welcome to report issues and suggest enhancements/features, too.
 ###0.0.1
 
 - Initial release of extension
+
+###0.1.0
+
+- [ENHANCEMENT] #5 Allow multiple instances on one page
+- [BUGFIX] #3 Wrong url to pdf file
+- [BUGFIX] #4 Clearfix missing
