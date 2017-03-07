@@ -40,7 +40,7 @@
 </f:section>
 
 <f:section name="javascript">
-    <jh:pageRenderer.addJsInlineCode name="tx_pdfjs_pdfviewer" addToFooter="true">
+    <jh:pageRenderer.addJsInlineCode name="tx_pdfjs_pdfviewer_u{cObj.uid}" addToFooter="true">
         (function() {
             var pdfjs{cObj.uid} = new tx_pdfjs({
                 <f:comment>We will need to wake up fluid</f:comment>
