@@ -62,12 +62,13 @@ You are welcome to report issues and suggest enhancements/features, too.
 
 ##ChangeLog
 
+- [ENHANCEMENT] #5  Allow multiple instances on one page
+- [ENHANCEMeNT] #9  Add "jump to page" field
+- [BUG]         #3  Wrong url to pdf file
+- [BUG]         #4  Clearfix missing
+- [BUG]         #8  New content element wizard misses labels
+- [TASK]        #7  Add Support for Typo 3 v8.x
+
 ###0.0.1
 
 - Initial release of extension
-
-###0.1.0
-
-- [ENHANCEMENT] #5 Allow multiple instances on one page
-- [BUGFIX] #3 Wrong url to pdf file
-- [BUGFIX] #4 Clearfix missing
