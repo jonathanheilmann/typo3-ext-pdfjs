@@ -16,8 +16,8 @@ if (!defined('TYPO3_MODE'))
             elements {
                 tx_pdfjs_pdfviewer {
                     icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.svg
-                    title = LLL:EXT:pdfjs/Resources/Private/Language/newContentElements.xlf:pdfViewer.title
-                    description = LLL:EXT:pdfjs/Resources/Private/Language/newContentElements.xlf:pdfViewer.description
+                    title = LLL:EXT:pdfjs/Resources/Private/Language/newContentElement.xlf:pdfViewer.title
+                    description = LLL:EXT:pdfjs/Resources/Private/Language/newContentElement.xlf:pdfViewer.description
                     tt_content_defValues {
                         CType = list
                         list_type = pdfjs_pdfviewer
