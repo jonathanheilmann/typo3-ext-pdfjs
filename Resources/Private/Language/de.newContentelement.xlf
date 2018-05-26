@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2018-05-26T20:52:58Z">
+		<header>
+			<generator>LFEditor</generator>
+			<authorName>Jonathan Heilmann</authorName>
+			<authorEmail>mail@jonathan-heilmann.de</authorEmail>
+		</header>
+		<body>
+		<trans-unit id="pdfViewer.title" approved="yes">
+			<source>PDF Viewer</source>
+			<target>PDF Viewer</target>
+		</trans-unit>
+		<trans-unit id="pdfViewer.description" approved="yes">
+			<source>PDF Viewer provided by PDF.js by Mozilla Foundation with various configuration options.</source>
+			<target>PDF Viewer bereitgestellt durch PDF.js der Mozilla Foundation mit verschiedenen Konfigurations-Optionen.</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

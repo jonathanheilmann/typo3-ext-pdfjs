@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = array (
   'title' => 'PDF Viewer based upon PDF.js',
   'description' => 'Integrates PDF.js by Mozilla Foundation into TYPO3 CMS and provides various configuration options.',
   'category' => 'plugin',
-  'version' => '0.0.1',
+  'version' => '0.1.0',
   'state' => 'beta',
   'uploadfolder' => false,
   'createDirs' => '',
@@ -27,7 +27,7 @@ $EM_CONF[$_EXTKEY] = array (
     'depends' => 
     array (
       'php' => '',
-      'typo3' => '7.6.0-7.6.99',
+      'typo3' => '7.6.0-8.7.99',
     ),
     'conflicts' => 
     array (

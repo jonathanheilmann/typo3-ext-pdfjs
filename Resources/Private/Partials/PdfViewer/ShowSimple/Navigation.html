@@ -3,8 +3,12 @@
         <a href="javascript:void(0)" id="pdfjs-previous-{cObj.uid}" class="btn btn-default" role="button" title="{f:translate(key:'pdfViewer.previous.title')}">
             <f:translate key="pdfViewer.previous" />
         </a>
-        <span class="page-index-wrapper">
-            <f:translate key="pdfViewer.page" /> <span id="pdfjs-page-num-{cObj.uid}">0</span><f:translate key="pdfViewer.pageIndexSeparator" /><span id="pdfjs-page-count-{cObj.uid}">0</span>
+        <span class="page-index-wrapper" style="padding-top: 0; padding-bottom: 0; border: 0;">
+            <f:translate key="pdfViewer.page" />
+            <div class="form-group" style="display: inline-block;">
+                <input type="number" class="form-control" id="pdfjs-jump-{cObj.uid}" value="1" min="1">
+            </div>
+            <span id="pdfjs-page-num-{cObj.uid}" style="display: none;">0</span><f:translate key="pdfViewer.pageIndexSeparator" /><span id="pdfjs-page-count-{cObj.uid}">0</span>
         </span>
         <a href="javascript:void(0)" id="pdfjs-next-{cObj.uid}" class="btn btn-default" role="button" title="{f:translate(key:'pdfViewer.next.title')}">
             <f:translate key="pdfViewer.next" />
