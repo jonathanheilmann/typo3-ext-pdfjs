@@ -22,12 +22,6 @@
                                         <numIndex index="0">LLL:EXT:pdfjs/Resources/Private/Language/locallangFlexforms.xlf:pdfViewer.layout.simple</numIndex>
                                         <numIndex index="1">PdfViewer->showSimple</numIndex>
                                     </numIndex>
-                                    <!--
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">LLL:EXT:pdfjs/Resources/Private/Language/locallangFlexforms.xlf:pdfViewer.layout.complete</numIndex>
-                                        <numIndex index="1">PdfViewer->showComplete</numIndex>
-                                    </numIndex>
-                                    -->
                                 </items>
                             </config>
                         </TCEforms>

@@ -37,9 +37,6 @@
 		<trans-unit id="pdfViewer.layout">
 			<source>Layout</source>
 		</trans-unit>
-		<trans-unit id="pdfViewer.layout.complete">
-			<source>Complete</source>
-		</trans-unit>
 		<trans-unit id="pdfViewer.layout.simple">
 			<source>Simple</source>
 		</trans-unit>
