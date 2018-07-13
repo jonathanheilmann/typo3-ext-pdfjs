@@ -62,6 +62,11 @@ You are welcome to report issues and suggest enhancements/features, too.
 
 ## ChangeLog
 
+### 0.2.0
+- [ENHANCEMENT] #12 Update PDFjs (to version 1.9.426)
+
+### 0.1.0
+
 - [ENHANCEMENT] #5  Allow multiple instances on one page
 - [ENHANCEMeNT] #9  Add "jump to page" field
 - [BUG]         #3  Wrong url to pdf file
