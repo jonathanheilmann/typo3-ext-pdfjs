@@ -4,7 +4,7 @@ namespace JonathanHeilmann\Pdfjs\Controller;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2016 Jonathan Heilmann <mail@jonathan-heilmann.de>
+ *  (c) 2016-2018 Jonathan Heilmann <mail@jonathan-heilmann.de>
  *
  *  All rights reserved
  *
@@ -57,6 +57,7 @@ class PdfViewerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
     /**
      * Show simple action for this controller.
+     * @throws \Exception
      */
     public function showSimpleAction()
 	{
@@ -70,6 +71,7 @@ class PdfViewerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
     /**
      * Show complete action for this controller.
+     * @throws \Exception
      */
     public function showCompleteAction()
     {
