@@ -70,6 +70,20 @@ class PdfViewerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     }
 
     /**
+     * Show complete action for this controller.
+     * @throws \Exception
+     */
+    public function showCompleteAction()
+    {
+        $this->cObj = $this->configurationManager->getContentObject()->data;
+        $file = $this->getFile();
+
+        $this->view->assign('cObj', $this->cObj);
+        $this->view->assign('file', $file);
+        $this->view->assign('settings', $this->settings);
+    }
+
+    /**
      * Merges settings from flexform into settings from typoscript
      */
     protected function mergeSettingsFromFlexform()

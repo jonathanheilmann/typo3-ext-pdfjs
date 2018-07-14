@@ -47,6 +47,10 @@
 			<source>Layout</source>
 			<target>Layout</target>
 		</trans-unit>
+		<trans-unit id="pdfViewer.layout.complete" approved="yes">
+			<source>Complete</source>
+			<target>Komplett</target>
+		</trans-unit>
 		<trans-unit id="pdfViewer.layout.simple" approved="yes">
 			<source>Simple</source>
 			<target>Einfach</target>
