@@ -45,6 +45,17 @@ All global configurations are accessible via Constant Editor, section "PLUGIN.TX
 Available constants are described in Constant Editor.
 For pages, not using bootstrap framework, this extension ships required styles in file "EXT:pdfjs/Resources/Public/Styles/bootstrapStyles.css". Insert this path in constant "plugin.tx_pdfjs.settings.bootstrapStyles".
 
+### Mozilla Viewer
+
+Mozilla provides a build in [demo viewer](https://mozilla.github.io/pdf.js/web/viewer.html), called `Mozilla Viewer`. 
+
+As Mozilla kindly asks to not use this viewer as unmodified version, you will need to acknowledge this by checking 
+constant `plugin.tx_pdfjs.settings.enableMozillaViewer` in Constant Editor.  
+Per default, the viewer uses the complete viewport. As this is not the intended behaviour of a TYPO3 plugin, this 
+extension sets the viewer height via css, configurable in Constant Editor for multiple breakpoints.  
+Please refer to constants `plugin.tx_pdfjs.settings.breakpoint.[sm,md,lg,xl]` for breakpoints and 
+`plugin.tx_pdfjs.settings.height.[xs,sm,md,lg,xl]` for their related viewer heights.
+
 ## User
 
 Add a PDF Viewer content element to your site:
@@ -63,6 +74,7 @@ You are welcome to report issues and suggest enhancements/features, too.
 ## ChangeLog
 
 ### 0.2.0
+- [FEATURE]     #12 Add Mozilla Viewer
 - [ENHANCEMENT] #12 Update PDFjs (to version 1.9.426)
 
 ### 0.1.0
