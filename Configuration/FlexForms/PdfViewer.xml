@@ -22,12 +22,10 @@
                                         <numIndex index="0">LLL:EXT:pdfjs/Resources/Private/Language/locallangFlexforms.xlf:pdfViewer.layout.simple</numIndex>
                                         <numIndex index="1">PdfViewer->showSimple</numIndex>
                                     </numIndex>
-                                    <!--
                                     <numIndex index="2" type="array">
-                                        <numIndex index="0">LLL:EXT:pdfjs/Resources/Private/Language/locallangFlexforms.xlf:pdfViewer.layout.complete</numIndex>
-                                        <numIndex index="1">PdfViewer->showComplete</numIndex>
+                                        <numIndex index="0">LLL:EXT:pdfjs/Resources/Private/Language/locallangFlexforms.xlf:pdfViewer.layout.mozillaViewer</numIndex>
+                                        <numIndex index="1">PdfViewer->mozillaViewer</numIndex>
                                     </numIndex>
-                                    -->
                                 </items>
                             </config>
                         </TCEforms>

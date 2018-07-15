@@ -1,4 +1,5 @@
 #customsubcategory=pdfViewer=PDF Viewer
+#customsubcategory=mozillaViewer=Mozilla Viewer
 plugin.tx_pdfjs {
     view {
         # cat=plugin.tx_pdfjs/file; type=string; label=Path to template root (FE)
@@ -26,5 +27,31 @@ plugin.tx_pdfjs {
         bootstrapStyles =
         # cat=plugin.tx_pdfjs/pdfViewer/930; type=string; label=Default styles: Extension specific styles
         defaultStyles = EXT:pdfjs/Resources/Public/Styles/defaultStyles.css
+
+
+        # cat=plugin.tx_pdfjs/mozillaViewer/010; type=boolean; label=Enable mozilla viewer: The viewer is built on the display layer and is the UI for PDF viewer in Firefox and the other browser extensions within the project. It can be a good starting point for building your own viewer. However, we do ask if you plan to embed the viewer in your own site, that it not just be an unmodified version. Please re-skin it or build upon it. (https://mozilla.github.io/pdf.js/getting_started/)
+        enableMozillaViewer = 0
+        # cat=plugin.tx_pdfjs/mozillaViewer/110; type=string; label=Default Mozilla Viewer styles: Extension specific styles
+        mozillaViewerStyles = EXT:pdfjs/Resources/Public/Styles/mozillaViewerStyles.css
+
+        # cat=plugin.tx_pdfjs/mozillaViewer/210; type=int+; label=Small breakpoint: greater than equal px
+        breakpoint.sm = 576
+        # cat=plugin.tx_pdfjs/mozillaViewer/220; type=int+; label=Medium breakpoint: greater than equal px
+        breakpoint.md = 768
+        # cat=plugin.tx_pdfjs/mozillaViewer/230; type=int+; label=Large breakpoint: greater than equal px
+        breakpoint.lg = 992
+        # cat=plugin.tx_pdfjs/mozillaViewer/240; type=int+; label=Extra large breakpoint: greater than equal px
+        breakpoint.xl = 1200
+
+        # cat=plugin.tx_pdfjs/mozillaViewer/300; type=int+; label=Extra small height: Mozilla Viewer height for extra small devices
+        height.xs = 320
+        # cat=plugin.tx_pdfjs/mozillaViewer/310; type=int+; label=Small height: Mozilla Viewer height for small devices
+        height.sm = 432
+        # cat=plugin.tx_pdfjs/mozillaViewer/320; type=int+; label=Medium height: Mozilla Viewer height for medium devices
+        height.md = 576
+        # cat=plugin.tx_pdfjs/mozillaViewer/330; type=int+; label=Large height: Mozilla Viewer height for large devices
+        height.lg = 744
+        # cat=plugin.tx_pdfjs/mozillaViewer/340; type=int+; label=Extra large height: Mozilla Viewer height for extra large devices
+        height.xl = 900
     }
 }

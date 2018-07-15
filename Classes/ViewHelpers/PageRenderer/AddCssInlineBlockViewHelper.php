@@ -5,7 +5,7 @@ namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
  *
  *  Copyright notice
  *
- *  (c) 2016-2018 Jonathan Heilmann <mail@jonathan-heilmann.de>
+ *  (c) 2018 Jonathan Heilmann <mail@jonathan-heilmann.de>
  *
  *  All rights reserved
  *
@@ -29,10 +29,10 @@ namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
 use TYPO3\CMS\Core\Page\PageRenderer;
 
 /**
- * Class AddJsInlineCodeViewHelper
+ * Class AddCssInlineCodeViewHelper
  * @package JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer
  */
-class AddJsInlineCodeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class AddCssInlineCodeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
 {
 
     /**
@@ -40,9 +40,8 @@ class AddJsInlineCodeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstrac
      * @param string|null $block
      * @param bool $compress
      * @param bool $forceOnTop
-     * @param bool $addToFooter
      */
-    public function render($name, $block = null, $compress = true, $forceOnTop = false, $addToFooter = false)
+    public function render($name, $block = null, $compress = true, $forceOnTop = false)
     {
         if ($block === null) {
             $block = $this->renderChildren();
@@ -50,20 +49,17 @@ class AddJsInlineCodeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstrac
 
         $block = trim($block);
 
-        if (strpos($block, '<script type="text/javascript">') === 0) {
-            $block = substr($block, strlen('<script type="text/javascript">'));
+        if (strpos($block, '<style type="text/css">') === 0) {
+            $block = substr($block, strlen('<style type="text/css">'));
         }
-        if (strpos($block, '</script>') === (strlen($block) - strlen('</script>'))) {
-            $block = substr($block, 0, (strlen($block) - strlen('</script>')));
+        if (strpos($block, '</style>') === (strlen($block) - strlen('</style>'))) {
+            $block = substr($block, 0, (strlen($block) - strlen('</style>')));
         }
         $block = trim($block);
 
         /** @var PageRenderer $pageRenderer */
         $pageRenderer = $this->objectManager->get(PageRenderer::class);
-        if ($addToFooter === false)
-            $pageRenderer->addJsInlineCode($name, $block, $compress, $forceOnTop);
-        else
-            $pageRenderer->addJsFooterInlineCode($name, $block, $compress, $forceOnTop);
+        $pageRenderer->addCssInlineBlock($name, $block, $compress, $forceOnTop);
     }
 
 }

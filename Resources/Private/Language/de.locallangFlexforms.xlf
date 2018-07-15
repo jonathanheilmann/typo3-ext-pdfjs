@@ -47,9 +47,9 @@
 			<source>Layout</source>
 			<target>Layout</target>
 		</trans-unit>
-		<trans-unit id="pdfViewer.layout.complete" approved="yes">
-			<source>Complete</source>
-			<target>Komplett</target>
+		<trans-unit id="pdfViewer.layout.mozillaViewer" approved="yes">
+			<source>Mozilla Viewer</source>
+			<target>Mozilla Viewer</target>
 		</trans-unit>
 		<trans-unit id="pdfViewer.layout.simple" approved="yes">
 			<source>Simple</source>

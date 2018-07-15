@@ -25,6 +25,8 @@ namespace JonathanHeilmann\Pdfjs\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\ArrayUtility;
 
 /**
@@ -70,10 +72,10 @@ class PdfViewerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     }
 
     /**
-     * Show complete action for this controller.
+     * Mozilla viewer action for this controller.
      * @throws \Exception
      */
-    public function showCompleteAction()
+    public function mozillaViewerAction()
     {
         $this->cObj = $this->configurationManager->getContentObject()->data;
         $file = $this->getFile();
@@ -81,6 +83,17 @@ class PdfViewerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $this->view->assign('cObj', $this->cObj);
         $this->view->assign('file', $file);
         $this->view->assign('settings', $this->settings);
+
+        $resolvedPdfJsDirectoryPath = $this->settings['pdfJsDirectoryPath'];
+        if (strpos($resolvedPdfJsDirectoryPath, 'EXT:') === 0) {
+            list($extKey, $local) = explode('/', substr($resolvedPdfJsDirectoryPath, 4), 2);
+            $resolvedPdfJsDirectoryPath = '';
+            if ((string)$extKey !== '' && ExtensionManagementUtility::isLoaded($extKey) && (string)$local !== '') {
+                $resolvedPdfJsDirectoryPath = ExtensionManagementUtility::extPath($extKey) . $local;
+            }
+            $resolvedPdfJsDirectoryPath = str_replace(GeneralUtility::getIndpEnv('TYPO3_DOCUMENT_ROOT'), '', $resolvedPdfJsDirectoryPath);
+        }
+        $this->view->assign('resolvedPdfJsDirectoryPath', $resolvedPdfJsDirectoryPath);
     }
 
     /**

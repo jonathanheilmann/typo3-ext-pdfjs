@@ -27,5 +27,20 @@ plugin.tx_pdfjs {
         pdfRendererPath = {$plugin.tx_pdfjs.settings.pdfRendererPath}
         bootstrapStyles = {$plugin.tx_pdfjs.settings.bootstrapStyles}
         defaultStyles = {$plugin.tx_pdfjs.settings.defaultStyles}
+
+
+        enableMozillaViewer = {$plugin.tx_pdfjs.settings.enableMozillaViewer}
+        mozillaViewerStyles = {$plugin.tx_pdfjs.settings.mozillaViewerStyles}
+
+        breakpoint.sm = {$plugin.tx_pdfjs.settings.breakpoint.sm}
+        breakpoint.md = {$plugin.tx_pdfjs.settings.breakpoint.md}
+        breakpoint.lg = {$plugin.tx_pdfjs.settings.breakpoint.lg}
+        breakpoint.xl = {$plugin.tx_pdfjs.settings.breakpoint.xl}
+
+        height.xs = {$plugin.tx_pdfjs.settings.height.xs}
+        height.sm = {$plugin.tx_pdfjs.settings.height.sm}
+        height.md = {$plugin.tx_pdfjs.settings.height.md}
+        height.lg = {$plugin.tx_pdfjs.settings.height.lg}
+        height.xl = {$plugin.tx_pdfjs.settings.height.xl}
     }
 }

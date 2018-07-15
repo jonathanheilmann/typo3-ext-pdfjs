@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE'))
     'JonathanHeilmann.' . $_EXTKEY,
     'PdfViewer',
 	array(
-		'PdfViewer' => 'showSimple, showComplete',
+		'PdfViewer' => 'showSimple, mozillaViewer',
 	)
 );
 

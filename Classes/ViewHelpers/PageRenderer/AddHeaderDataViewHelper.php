@@ -1,11 +1,12 @@
 <?php
+
 namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
 
 /***************************************************************
  *
  *  Copyright notice
  *
- *  (c) 2016-2018 Jonathan Heilmann <mail@jonathan-heilmann.de>
+ *  (c) 2018 Jonathan Heilmann <mail@jonathan-heilmann.de>
  *
  *  All rights reserved
  *
@@ -29,41 +30,26 @@ namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
 use TYPO3\CMS\Core\Page\PageRenderer;
 
 /**
- * Class AddJsInlineCodeViewHelper
+ * Class AddHeaderDataViewHelper
  * @package JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer
  */
-class AddJsInlineCodeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class AddHeaderDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
 {
 
     /**
-     * @param string $name
-     * @param string|null $block
-     * @param bool $compress
-     * @param bool $forceOnTop
-     * @param bool $addToFooter
+     * @param string $data
+     *
+     * @see PageRenderer::addHeaderData
      */
-    public function render($name, $block = null, $compress = true, $forceOnTop = false, $addToFooter = false)
+    public function render($data = null)
     {
-        if ($block === null) {
-            $block = $this->renderChildren();
+        if ($data === null) {
+            $data = $this->renderChildren();
         }
-
-        $block = trim($block);
-
-        if (strpos($block, '<script type="text/javascript">') === 0) {
-            $block = substr($block, strlen('<script type="text/javascript">'));
-        }
-        if (strpos($block, '</script>') === (strlen($block) - strlen('</script>'))) {
-            $block = substr($block, 0, (strlen($block) - strlen('</script>')));
-        }
-        $block = trim($block);
 
         /** @var PageRenderer $pageRenderer */
         $pageRenderer = $this->objectManager->get(PageRenderer::class);
-        if ($addToFooter === false)
-            $pageRenderer->addJsInlineCode($name, $block, $compress, $forceOnTop);
-        else
-            $pageRenderer->addJsFooterInlineCode($name, $block, $compress, $forceOnTop);
+        $pageRenderer->addHeaderData($data);
     }
 
 }

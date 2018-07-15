@@ -1,0 +1,33 @@
+{namespace jh = JonathanHeilmann\Pdfjs\ViewHelpers}
+
+<f:layout name="mozillaViewerLayout" />
+
+<f:section name="content">
+    <f:if condition="{settings.enableMozillaViewer}">
+        <f:then>
+            <jh:pageRenderer.addJsFile file="{settings.pdfJsDirectoryPath}build/pdf.js" />
+            <jh:pageRenderer.addCssFile file="{settings.pdfJsDirectoryPath}web/viewer.css" />
+            <jh:pageRenderer.addCssFile file="{settings.mozillaViewerStyles}" />
+
+            <jh:pageRenderer.addHeaderData data='<link rel="resource" type="application/l10n" href="{resolvedPdfJsDirectoryPath}web/locale/locale.properties">' />
+
+            <f:render partial="PdfViewer/MozillaViewer/Viewer" />
+            <f:render partial="PdfViewer/MozillaViewer/JavaScript" arguments="{_all}" />
+            <f:render partial="PdfViewer/MozillaViewer/Styles" arguments="{settings: settings}" />
+        </f:then>
+        <f:else>
+            <p>
+                Mozilla Viewer is disabled by default. Please enable Mozilla Viewer in Constant
+                Editor by setting constant `plugin.tx_pdfjs.settings.enableMozillaViewer`.
+            </p>
+
+            <blockquote cite="https://mozilla.github.io/pdf.js/getting_started/">
+                The viewer is built on the display layer and is the UI for PDF viewer in Firefox and the other browser
+                extensions within the project. It can be a good starting point for building your own viewer. <i>However,
+                we do ask if you plan to embed the viewer in your own site, that it not just be an unmodified version.
+                Please re-skin it or build upon it.</i>
+                <cite>https://mozilla.github.io/pdf.js/getting_started/</cite>
+            </blockquote>
+        </f:else>
+    </f:if>
+</f:section>

@@ -1,0 +1,5 @@
+.tx_pdfjs.mozilla-viewer * {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+}
