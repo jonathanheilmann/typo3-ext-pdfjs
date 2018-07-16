@@ -1,6 +1,6 @@
 {namespace jh = JonathanHeilmann\Pdfjs\ViewHelpers}
 
-<jh:pageRenderer.addCssInlineCode name="tx_pdfjs_mozillaViewer_outerContainer" compress="true">
+<jh:pageRenderer.addCssInlineBlock name="tx_pdfjs_mozillaViewer_outerContainer" compress="true">
     <style type="text/css">
         #outerContainer { height: <f:comment>wake up!</f:comment>{settings.height.xs}px; }
         @media (min-width: {settings.breakpoint.sm}px) {
@@ -16,4 +16,4 @@
         #outerContainer { height: <f:comment>wake up!</f:comment>{settings.height.xl}px; }
         }
     </style>
-</jh:pageRenderer.addCssInlineCode>
+</jh:pageRenderer.addCssInlineBlock>

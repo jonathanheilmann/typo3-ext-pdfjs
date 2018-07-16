@@ -29,10 +29,10 @@ namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
 use TYPO3\CMS\Core\Page\PageRenderer;
 
 /**
- * Class AddCssInlineCodeViewHelper
+ * Class AddCssInlineBlockViewHelper
  * @package JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer
  */
-class AddCssInlineCodeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class AddCssInlineBlockViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
 {
 
     /**
