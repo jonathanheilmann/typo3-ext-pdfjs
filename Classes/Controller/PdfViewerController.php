@@ -25,9 +25,9 @@ namespace JonathanHeilmann\Pdfjs\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\ArrayUtility;
 
 /**
  * Class PdfViewerController
@@ -101,7 +101,7 @@ class PdfViewerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     protected function mergeSettingsFromFlexform()
     {
-        $this->settings = ArrayUtility::arrayMergeRecursiveOverrule($this->settings, $this->settings['flexform'], true, false);
+        ArrayUtility::mergeRecursiveWithOverrule($this->settings, $this->settings['flexform'], true, false);
     }
 
     /**

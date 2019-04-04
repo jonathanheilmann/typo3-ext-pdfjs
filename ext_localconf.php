@@ -23,7 +23,7 @@ $iconRegistry->registerIcon(
         plugins {
             elements {
                 tx_pdfjs_pdfviewer {
-                    icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.svg
+                    icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath($_EXTKEY) . 'ext_icon.svg
                     iconIdentifier = tx-pdfjs-pdfviewer
                     title = LLL:EXT:pdfjs/Resources/Private/Language/newContentElement.xlf:pdfViewer.title
                     description = LLL:EXT:pdfjs/Resources/Private/Language/newContentElement.xlf:pdfViewer.description

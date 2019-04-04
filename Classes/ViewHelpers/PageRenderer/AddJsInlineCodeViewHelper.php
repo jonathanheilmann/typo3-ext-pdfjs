@@ -5,7 +5,7 @@ namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
  *
  *  Copyright notice
  *
- *  (c) 2016-2018 Jonathan Heilmann <mail@jonathan-heilmann.de>
+ *  (c) 2016-2019 Jonathan Heilmann <mail@jonathan-heilmann.de>
  *
  *  All rights reserved
  *
@@ -26,44 +26,44 @@ namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use TYPO3\CMS\Core\Page\PageRenderer;
-
 /**
  * Class AddJsInlineCodeViewHelper
  * @package JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer
  */
-class AddJsInlineCodeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class AddJsInlineCodeViewHelper extends AbstractPageRenderViewHelper
 {
 
-    /**
-     * @param string $name
-     * @param string|null $block
-     * @param bool $compress
-     * @param bool $forceOnTop
-     * @param bool $addToFooter
-     */
-    public function render($name, $block = null, $compress = true, $forceOnTop = false, $addToFooter = false)
+    public function initializeArguments()
     {
-        if ($block === null) {
-            $block = $this->renderChildren();
+        $this->registerArgument('name', 'string', 'The name of the file', true, null);
+        $this->registerArgument('block', 'string', 'The JS content', false, null);
+        $this->registerArgument('compress', 'boolean', 'Compress output', false, false);
+        $this->registerArgument('forceOnTop', 'boolean', 'Force to top?', false, false);
+        $this->registerArgument('addToFooter', 'boolean', 'Add to footer?', false, false);
+    }
+
+    public function render()
+    {
+        if ($this->arguments['block'] === null) {
+            $this->arguments['block'] = htmlspecialchars_decode($this->renderChildren(), ENT_QUOTES);
         }
 
-        $block = trim($block);
+        $this->arguments['block'] = trim($this->arguments['block']);
 
-        if (strpos($block, '<script type="text/javascript">') === 0) {
-            $block = substr($block, strlen('<script type="text/javascript">'));
+        if (strpos($this->arguments['block'], '<script type="text/javascript">') === 0) {
+            $this->arguments['block]'] = substr($this->arguments['block'], strlen('<script type="text/javascript">'));
         }
-        if (strpos($block, '</script>') === (strlen($block) - strlen('</script>'))) {
-            $block = substr($block, 0, (strlen($block) - strlen('</script>')));
+        if (strpos($this->arguments['block'], '</script>') === (strlen($this->arguments['block']) - strlen('</script>'))) {
+            $this->arguments['block'] = substr($this->arguments['block'], 0, (strlen($this->arguments['block']) - strlen('</script>')));
         }
-        $block = trim($block);
+        $this->arguments['block'] = trim($this->arguments['block']);
 
-        /** @var PageRenderer $pageRenderer */
-        $pageRenderer = $this->objectManager->get(PageRenderer::class);
-        if ($addToFooter === false)
-            $pageRenderer->addJsInlineCode($name, $block, $compress, $forceOnTop);
-        else
-            $pageRenderer->addJsFooterInlineCode($name, $block, $compress, $forceOnTop);
+        if ($this->arguments['addToFooter'] === false) {
+            $this->pageRenderer->addJsInlineCode($this->arguments['name'], $this->arguments['block'], $this->arguments['compress'], $this->arguments['forceOnTop']);
+        } else {
+            $this->pageRenderer->addJsFooterInlineCode($this->arguments['name'], $this->arguments['block'], $this->arguments['compress'], $this->arguments['forceOnTop']);
+        }
+        return '';
     }
 
 }

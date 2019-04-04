@@ -5,7 +5,7 @@ namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
  *
  *  Copyright notice
  *
- *  (c) 2018 Jonathan Heilmann <mail@jonathan-heilmann.de>
+ *  (c) 2018-2019 Jonathan Heilmann <mail@jonathan-heilmann.de>
  *
  *  All rights reserved
  *
@@ -26,14 +26,20 @@ namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use TYPO3\CMS\Core\Page\PageRenderer;
-
 /**
  * Class AddCssInlineBlockViewHelper
  * @package JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer
  */
-class AddCssInlineBlockViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class AddCssInlineBlockViewHelper extends AbstractPageRenderViewHelper
 {
+
+    public function initializeArguments()
+    {
+        $this->registerArgument('name', 'string', 'The name of the file', true, null);
+        $this->registerArgument('block', 'string', 'The JS content', false, null);
+        $this->registerArgument('compress', 'boolean', 'Compress output', false, false);
+        $this->registerArgument('forceOnTop', 'boolean', 'Force to top?', false, false);
+    }
 
     /**
      * @param string $name
@@ -43,23 +49,21 @@ class AddCssInlineBlockViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstr
      */
     public function render($name, $block = null, $compress = true, $forceOnTop = false)
     {
-        if ($block === null) {
-            $block = $this->renderChildren();
+        if ($this->arguments['block'] === null) {
+            $this->arguments['block'] = $this->renderChildren();
         }
 
-        $block = trim($block);
+        $this->arguments['block'] = trim($this->arguments['block']);
 
-        if (strpos($block, '<style type="text/css">') === 0) {
-            $block = substr($block, strlen('<style type="text/css">'));
+        if (strpos($this->arguments['block'], '<style type="text/css">') === 0) {
+            $this->arguments['block'] = substr($this->arguments['block'], strlen('<style type="text/css">'));
         }
-        if (strpos($block, '</style>') === (strlen($block) - strlen('</style>'))) {
-            $block = substr($block, 0, (strlen($block) - strlen('</style>')));
+        if (strpos($this->arguments['block'], '</style>') === (strlen($this->arguments['block']) - strlen('</style>'))) {
+            $this->arguments['block'] = substr($this->arguments['block'], 0, (strlen($this->arguments['block']) - strlen('</style>')));
         }
-        $block = trim($block);
+        $this->arguments['block'] = trim($block);
 
-        /** @var PageRenderer $pageRenderer */
-        $pageRenderer = $this->objectManager->get(PageRenderer::class);
-        $pageRenderer->addCssInlineBlock($name, $block, $compress, $forceOnTop);
+        $this->pageRenderer->addCssInlineBlock($this->arguments['name'], $this->arguments['block'], $this->arguments['compress'], $this->arguments['forceOnTop']);
     }
 
 }

@@ -1,12 +1,11 @@
 <?php
-
 namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
 
 /***************************************************************
  *
  *  Copyright notice
  *
- *  (c) 2018-2019 Jonathan Heilmann <mail@jonathan-heilmann.de>
+ *  (c) 2019 Jonathan Heilmann <mail@jonathan-heilmann.de>
  *
  *  All rights reserved
  *
@@ -27,28 +26,27 @@ namespace JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use TYPO3\CMS\Core\Page\PageRenderer;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Object\ObjectManager;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
+
 /**
- * Class AddHeaderDataViewHelper
+ * Class AbstractPageRenderViewHelper
  * @package JonathanHeilmann\Pdfjs\ViewHelpers\PageRenderer
  */
-class AddHeaderDataViewHelper extends AbstractPageRenderViewHelper
+class AbstractPageRenderViewHelper extends AbstractTagBasedViewHelper
 {
 
-    public function initializeArguments()
+    /** @var ObjectManager */
+    protected $objectManager;
+
+    /** @var PageRenderer */
+    protected $pageRenderer;
+
+    public function initialize()
     {
-        $this->registerArgument('data', 'string', '', false, null);
+        $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
+        $this->pageRenderer = $this->objectManager->get(PageRenderer::class);
     }
-
-    /**
-     * @see PageRenderer::addHeaderData
-     */
-    public function render()
-    {
-        if ($this->arguments['data'] === null) {
-            $this->arguments['data'] = $this->renderChildren();
-        }
-
-        $this->pageRenderer->addHeaderData($this->arguments['data']);
-    }
-
 }
