@@ -42,12 +42,9 @@ class AddCssInlineBlockViewHelper extends AbstractPageRenderViewHelper
     }
 
     /**
-     * @param string $name
-     * @param string|null $block
-     * @param bool $compress
-     * @param bool $forceOnTop
+     *
      */
-    public function render($name, $block = null, $compress = true, $forceOnTop = false)
+    public function render()
     {
         if ($this->arguments['block'] === null) {
             $this->arguments['block'] = $this->renderChildren();
