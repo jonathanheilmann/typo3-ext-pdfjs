@@ -7,7 +7,7 @@
     "typo3/cms-core": ">=8.7.0,<9.5.99"
   },
   "replace": {
-    "pdfjs": "+",
+    "pdfjs": "self.version",
     "typo3-ter/pdfjs": "self.version"
   },
   "autoload": {
