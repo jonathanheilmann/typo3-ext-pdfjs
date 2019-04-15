@@ -58,7 +58,7 @@ class AddCssInlineBlockViewHelper extends AbstractPageRenderViewHelper
         if (strpos($this->arguments['block'], '</style>') === (strlen($this->arguments['block']) - strlen('</style>'))) {
             $this->arguments['block'] = substr($this->arguments['block'], 0, (strlen($this->arguments['block']) - strlen('</style>')));
         }
-        $this->arguments['block'] = trim($block);
+        $this->arguments['block'] = trim($this->arguments['block']);
 
         $this->pageRenderer->addCssInlineBlock($this->arguments['name'], $this->arguments['block'], $this->arguments['compress'], $this->arguments['forceOnTop']);
     }
