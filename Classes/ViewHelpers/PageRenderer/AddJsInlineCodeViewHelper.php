@@ -51,7 +51,7 @@ class AddJsInlineCodeViewHelper extends AbstractPageRenderViewHelper
         $this->arguments['block'] = trim($this->arguments['block']);
 
         if (strpos($this->arguments['block'], '<script type="text/javascript">') === 0) {
-            $this->arguments['block]'] = substr($this->arguments['block'], strlen('<script type="text/javascript">'));
+            $this->arguments['block'] = substr($this->arguments['block'], strlen('<script type="text/javascript">'));
         }
         if (strpos($this->arguments['block'], '</script>') === (strlen($this->arguments['block']) - strlen('</script>'))) {
             $this->arguments['block'] = substr($this->arguments['block'], 0, (strlen($this->arguments['block']) - strlen('</script>')));
