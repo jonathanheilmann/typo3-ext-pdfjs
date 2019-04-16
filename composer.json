@@ -2,7 +2,7 @@
   "name": "jonathanheilmann/pdfjs",
   "description": "Integrates PDF.js by Mozilla Foundation into TYPO3 CMS and provides various configuration options.",
   "type": "typo3-cms-extension",
-  "version": "0.2.0-rc.2",
+  "version": "0.2.0-rc.3",
   "require": {
     "typo3/cms-core": ">=8.7.0,<9.5.99"
   },
